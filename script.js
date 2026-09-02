@@ -1,12 +1,6 @@
-/* =====================================
-   DESA SEPINGGAN GELIK
-   JAVASCRIPT
-===================================== */
-
-
-/* =====================================
-   MENU MOBILE
-===================================== */
+// =====================================
+// MENU MOBILE
+// =====================================
 
 const menuToggle =
     document.getElementById("menuToggle");
@@ -29,9 +23,9 @@ if (menuToggle && navMenu) {
 }
 
 
-/* =====================================
-   TUTUP MENU SETELAH LINK DIKLIK
-===================================== */
+// =====================================
+// TUTUP MENU SETELAH LINK DIKLIK
+// =====================================
 
 const navLinks =
     document.querySelectorAll("#navMenu a");
@@ -55,9 +49,9 @@ navLinks.forEach(function(link) {
 });
 
 
-/* =====================================
-   TAHUN OTOMATIS
-===================================== */
+// =====================================
+// TAHUN OTOMATIS
+// =====================================
 
 const year =
     document.getElementById("year");
