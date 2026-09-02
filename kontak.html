@@ -26,7 +26,7 @@
         }
 
         .contact-section {
-            padding: 35px 0 60px;
+            padding: 40px 0 60px;
         }
 
         .subtitle {
@@ -51,6 +51,7 @@
             gap: 35px;
         }
 
+        /* Kartu informasi */
         .contact-card {
             background: white;
             padding: 60px 50px;
@@ -76,55 +77,28 @@
         .icon {
             font-size: 25px;
             width: 25px;
+            flex-shrink: 0;
         }
 
+        /* Kartu Google Maps */
         .map-card {
             background: #dbeaff;
             border-radius: 25px;
             min-height: 450px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
 
-        .map-icon {
-            font-size: 55px;
-            margin-bottom: 30px;
+        .map-card iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+            display: block;
         }
 
-        .map-card h2 {
-            color: #111;
-            font-size: 30px;
-            margin-bottom: 18px;
-        }
-
-        .map-card p {
-            color: #111;
-            font-size: 23px;
-            margin-bottom: 30px;
-        }
-
-        .map-button {
-            display: inline-block;
-            background: #20c765;
-            color: white;
-            text-decoration: none;
-            font-size: 23px;
-            font-weight: bold;
-            padding: 22px 38px;
-            border-radius: 12px;
-            transition: 0.3s;
-        }
-
-        .map-button:hover {
-            background: #159e4e;
-            transform: translateY(-2px);
-        }
-
+        /* Tampilan HP */
         @media (max-width: 800px) {
+
             .contact-wrapper {
                 grid-template-columns: 1fr;
             }
@@ -146,13 +120,12 @@
                 font-size: 18px;
             }
 
-            .map-card p {
-                font-size: 18px;
+            .map-card {
+                min-height: 350px;
             }
 
-            .map-button {
-                font-size: 18px;
-                padding: 18px 25px;
+            .map-card iframe {
+                height: 350px;
             }
         }
     </style>
@@ -164,7 +137,7 @@
 
         <div class="container">
 
-            <!-- Judul -->
+            <!-- Judul halaman -->
             <div class="subtitle">
                 KONTAK
             </div>
@@ -172,7 +145,6 @@
             <h1 class="title">
                 Hubungi Desa
             </h1>
-
 
             <div class="contact-wrapper">
 
@@ -214,30 +186,15 @@
                 </div>
 
 
-                <!-- Lokasi -->
+                <!-- Google Maps -->
                 <div class="map-card">
 
-                    <div class="map-icon">
-                        📍
-                    </div>
-
-                    <h2>
-                        Lokasi Desa
-                    </h2>
-
-                    <p>
-                        Desa Sepinggan Gelik
-                    </p>
-
-                    <!-- Tombol Google Maps -->
-                    <a
-                        href="https://maps.app.goo.gl/fsnvnymFf8NdKBVTA"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="map-button"
-                    >
-                        Buka Google Maps
-                    </a>
+                    <iframe
+                        src="https://www.google.com/maps?q=Sepinggan+Gelik&output=embed"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
 
                 </div>
 
