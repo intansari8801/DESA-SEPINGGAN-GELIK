@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Galeri Desa | Sepinggan Gelik</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <style>
+
+        .gallery-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+        .gallery-item {
+
+            height: 260px;
+
+            border-radius: 15px;
+
+            background-position: center;
+
+            background-size: cover;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,.08);
+
+            transition: .3s;
+
+        }
+
+
+        .gallery-item:hover {
+
+            transform: scale(1.02);
+
+        }
+
+
+        .gallery-1 {
+
+            background-image:
+                url("assets/images/kegiatan-1.jpg");
+
+        }
+
+
+        .gallery-2 {
+
+            background-image:
+                url("assets/images/kegiatan-2.jpg");
+
+        }
+
+
+        .gallery-3 {
+
+            background-image:
+                url("assets/images/kegiatan-3.jpg");
+
+        }
+
+
+        .gallery-4 {
+
+            background-image:
+                url("assets/images/potensi-1.jpg");
+
+        }
+
+
+        .gallery-5 {
+
+            background-image:
+                url("assets/images/potensi-2.jpg");
+
+        }
+
+
+        .gallery-6 {
+
+            background-image:
+                url("assets/images/potensi-3.jpg");
+
+        }
+
+
+        @media(max-width:700px) {
+
+            .gallery-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">🌿</span>
+
+            <div>
+                <strong>Desa Sepinggan Gelik</strong>
+                <small>Website Desa</small>
+            </div>
+
+        </a>
+
+
+        <button class="menu-toggle"
+                id="menuToggle">
+            ☰
+        </button>
+
+
+        <nav id="navMenu">
+
+            <a href="index.html">Beranda</a>
+            <a href="profil.html">Profil</a>
+            <a href="pemerintahan.html">Pemerintahan</a>
+            <a href="potensi.html">Potensi</a>
+            <a href="berita.html">Berita</a>
+
+            <a class="active"
+               href="galeri.html">
+                Galeri
+            </a>
+
+            <a href="kontak.html">Kontak</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<section class="hero" style="min-height:55vh">
+
+    <div class="container hero-content">
+
+        <span class="badge">
+            GALERI
+        </span>
+
+        <h1>
+            Galeri <span>Desa</span>
+        </h1>
+
+        <p>
+            Dokumentasi kegiatan dan kehidupan
+            masyarakat Desa Sepinggan Gelik.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>DOKUMENTASI</span>
+
+            <h2>
+                Foto Desa
+            </h2>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item gallery-1"></div>
+
+            <div class="gallery-item gallery-2"></div>
+
+            <div class="gallery-item gallery-3"></div>
+
+            <div class="gallery-item gallery-4"></div>
+
+            <div class="gallery-item gallery-5"></div>
+
+            <div class="gallery-item gallery-6"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <h3>🌿 Desa Sepinggan Gelik</h3>
+
+            <p>
+                Website informasi Desa Sepinggan Gelik.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Menu</h4>
+
+            <a href="index.html">Beranda</a>
+            <a href="profil.html">Profil</a>
+            <a href="potensi.html">Potensi</a>
+            <a href="berita.html">Berita</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Kontak</h4>
+
+            <p>
+                📍 Kantor Desa Sepinggan Gelik
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © <span id="year"></span>
+        Desa Sepinggan Gelik.
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
