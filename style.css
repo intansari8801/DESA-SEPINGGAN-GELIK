@@ -1,0 +1,1086 @@
+/* =========================================
+   DESA SEPINGGAN GELIK
+   MAIN STYLESHEET
+========================================= */
+
+:root {
+
+    --green: #166534;
+    --green-dark: #14532d;
+    --green-light: #22c55e;
+
+    --yellow: #facc15;
+
+    --white: #ffffff;
+
+    --dark: #17211b;
+
+    --gray: #64748b;
+
+    --light: #f0fdf4;
+
+    --gray-bg: #f8fafc;
+
+    --border: #e2e8f0;
+
+    --shadow:
+        0 10px 30px rgba(0, 0, 0, .08);
+
+}
+
+
+/* RESET */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--dark);
+
+    line-height: 1.7;
+
+    background: var(--white);
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+.container {
+
+    width: min(1120px, 92%);
+
+    margin: auto;
+
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background:
+        rgba(20, 83, 45, .97);
+
+    box-shadow:
+        0 2px 15px rgba(0, 0, 0, .1);
+
+}
+
+
+.nav-container {
+
+    min-height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: white;
+
+}
+
+
+.logo-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    background: white;
+
+    color: var(--green);
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 21px;
+
+}
+
+
+.logo strong {
+
+    display: block;
+
+    font-size: 16px;
+
+}
+
+
+.logo small {
+
+    display: block;
+
+    font-size: 11px;
+
+    opacity: .75;
+
+}
+
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+}
+
+
+nav a {
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+
+nav a:hover,
+nav a.active {
+
+    color: var(--yellow);
+
+}
+
+
+.menu-toggle {
+
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-top: 72px;
+
+    color: white;
+
+    background:
+        url("../assets/images/desa.jpg")
+        center / cover no-repeat;
+
+}
+
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20,83,45,.93),
+            rgba(20,83,45,.55)
+        );
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 750px;
+
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    padding: 7px 15px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(255,255,255,.15);
+
+    border:
+        1px solid rgba(255,255,255,.3);
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(45px, 7vw, 78px);
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero h1 span {
+
+    color: var(--yellow);
+
+}
+
+
+.hero p {
+
+    max-width: 650px;
+
+    font-size: 18px;
+
+    color: #ecfdf5;
+
+    margin-bottom: 30px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.btn {
+
+    display: inline-block;
+
+    padding: 12px 23px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: .3s;
+
+}
+
+
+.btn-primary {
+
+    color: white;
+
+    background:
+        var(--green-light);
+
+}
+
+
+.btn-primary:hover {
+
+    background: #16a34a;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.btn-outline {
+
+    color: white;
+
+    border:
+        1px solid white;
+
+}
+
+
+.btn-outline:hover {
+
+    background: white;
+
+    color: var(--green);
+
+}
+
+
+.btn-light {
+
+    background: white;
+
+    color: var(--green-dark);
+
+}
+
+
+.btn-light:hover {
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.section {
+
+    padding: 90px 0;
+
+}
+
+
+.section-heading {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin:
+        0 auto 45px;
+
+}
+
+
+.section-heading span {
+
+    color:
+        var(--green-light);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.section-heading h2 {
+
+    font-size: 38px;
+
+    color:
+        var(--green-dark);
+
+    margin:
+        7px 0 10px;
+
+}
+
+
+.section-heading p {
+
+    color: var(--gray);
+
+}
+
+
+.section-heading.light h2 {
+
+    color: white;
+
+}
+
+
+/* =========================================
+   TWO COLUMN
+========================================= */
+
+.two-column {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+
+}
+
+
+.two-column h2 {
+
+    color:
+        var(--green-dark);
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.two-column p {
+
+    color: var(--gray);
+
+    margin-bottom: 15px;
+
+}
+
+
+.image-box {
+
+    min-height: 420px;
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+    background:
+        url("../assets/images/desa.jpg")
+        center / cover no-repeat;
+
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.stats-section {
+
+    padding: 80px 0;
+
+    background:
+        var(--green-dark);
+
+}
+
+
+.stats-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.stat-card {
+
+    padding: 30px 15px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    background:
+        rgba(255,255,255,.08);
+
+}
+
+
+.stat-number {
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    color:
+        var(--yellow);
+
+}
+
+
+.stat-title {
+
+    color:
+        #dcfce7;
+
+}
+
+
+.data-note {
+
+    color: #94a3b8;
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+}
+
+
+.card {
+
+    padding: 28px;
+
+    border-radius: 16px;
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    box-shadow: var(--shadow);
+
+    transition: .3s;
+
+}
+
+
+.card:hover {
+
+    transform:
+        translateY(-7px);
+
+}
+
+
+.card-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 12px;
+
+    background:
+        #dcfce7;
+
+    font-size: 27px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.card h3 {
+
+    color:
+        var(--green-dark);
+
+    margin-bottom: 10px;
+
+}
+
+
+.card p {
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+}
+
+
+.center-button {
+
+    text-align: center;
+
+    margin-top: 35px;
+
+}
+
+
+/* =========================================
+   GRAY SECTION
+========================================= */
+
+.gray-section {
+
+    background:
+        var(--gray-bg);
+
+}
+
+
+/* =========================================
+   NEWS
+========================================= */
+
+.news-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+}
+
+
+.news-card {
+
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 16px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.news-image {
+
+    height: 210px;
+
+    background-position: center;
+
+    background-size: cover;
+
+}
+
+
+.news-1 {
+
+    background-image:
+        url("../assets/images/kegiatan-1.jpg");
+
+}
+
+
+.news-2 {
+
+    background-image:
+        url("../assets/images/kegiatan-2.jpg");
+
+}
+
+
+.news-3 {
+
+    background-image:
+        url("../assets/images/kegiatan-3.jpg");
+
+}
+
+
+.news-content {
+
+    padding: 23px;
+
+}
+
+
+.news-category {
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    color:
+        var(--green-light);
+
+}
+
+
+.news-content h3 {
+
+    color:
+        var(--green-dark);
+
+    margin:
+        8px 0;
+
+}
+
+
+.news-content p {
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.news-content a {
+
+    color:
+        var(--green);
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta {
+
+    padding: 80px 0;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green),
+            var(--green-dark)
+        );
+
+}
+
+
+.cta h2 {
+
+    font-size: 38px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.cta p {
+
+    color: #dcfce7;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    padding-top: 55px;
+
+    background:
+        #0f172a;
+
+    color: white;
+
+}
+
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 40px;
+
+    padding-bottom: 40px;
+
+}
+
+
+footer h3,
+footer h4 {
+
+    margin-bottom: 15px;
+
+}
+
+
+footer p,
+footer a {
+
+    display: block;
+
+    color:
+        #94a3b8;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+
+}
+
+
+footer a:hover {
+
+    color: white;
+
+}
+
+
+.copyright {
+
+    border-top:
+        1px solid #1e293b;
+
+    text-align: center;
+
+    padding: 20px;
+
+    color:
+        #64748b;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    nav {
+
+        position: absolute;
+
+        top: 72px;
+
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 20px 5%;
+
+        background:
+            var(--green-dark);
+
+    }
+
+
+    nav.show {
+
+        display: flex;
+
+    }
+
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+
+    .two-column {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .cards,
+    .news-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .stats-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .section {
+
+        padding: 65px 0;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .hero p {
+
+        font-size: 16px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .cards,
+    .news-grid,
+    .stats-grid,
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .image-box {
+
+        min-height: 300px;
+
+    }
+
+
+    .cta h2 {
+
+        font-size: 30px;
+
+    }
+
+}
