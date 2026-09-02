@@ -1,506 +1,415 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>Profil Desa Sepinggan Gelik</title>
 
-    <title>
-        Profil Desa Sepinggan Gelik
-    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <link rel="stylesheet"
-          href="style.css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #145c35;
+            color: white;
+        }
 
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            height: 72px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5.5%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 58px;
+            height: 58px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        .logo-text h2 {
+            color: #145c35;
+            font-size: 20px;
+        }
+
+        .logo-text p {
+            color: #666;
+            font-size: 15px;
+            margin-top: 3px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 32px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #145c35;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            color: #20c765;
+        }
+
+        /* =========================
+           DATA DESA
+        ========================= */
+
+        .data-section {
+            min-height: calc(100vh - 72px);
+            padding: 125px 5.5% 80px;
+            background: #145c35;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #20c765;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 56px;
+            margin-bottom: 25px;
+            color: white;
+        }
+
+        .description {
+            text-align: center;
+            font-size: 24px;
+            color: #a9ffca;
+            margin-bottom: 75px;
+        }
+
+        /* =========================
+           KARTU DATA
+        ========================= */
+
+        .data-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .data-card {
+            background: #286a46;
+            min-height: 235px;
+            border-radius: 22px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            padding: 30px 20px;
+
+            transition: 0.3s;
+        }
+
+        .data-card:hover {
+            transform: translateY(-5px);
+            background: #307850;
+        }
+
+        .data-number {
+            color: #ffd21c;
+            font-size: 38px;
+            font-weight: bold;
+            margin-bottom: 35px;
+        }
+
+        .data-label {
+            color: white;
+            font-size: 24px;
+        }
+
+        /* =========================
+           DAFTAR DUSUN
+        ========================= */
+
+        .dusun-section {
+            margin-top: 55px;
+            background: #286a46;
+            border-radius: 22px;
+            padding: 40px;
+        }
+
+        .dusun-section h2 {
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .dusun-list {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .dusun-item {
+            background: #347b55;
+            padding: 20px 10px;
+            border-radius: 12px;
+            text-align: center;
+            color: white;
+            font-size: 17px;
+        }
+
+        /* =========================
+           RESPONSIVE HP
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .data-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .dusun-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .menu {
+                gap: 15px;
+            }
+
+            .menu a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .navbar {
+                height: auto;
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .data-section {
+                padding: 70px 20px 50px;
+            }
+
+            .title {
+                font-size: 38px;
+            }
+
+            .description {
+                font-size: 18px;
+                margin-bottom: 45px;
+            }
+
+            .data-container {
+                grid-template-columns: 1fr;
+            }
+
+            .dusun-list {
+                grid-template-columns: 1fr;
+            }
+
+            .data-number {
+                font-size: 32px;
+            }
+
+            .data-label {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
-
 
 <body>
 
+    <!-- =========================
+         NAVBAR
+    ========================= -->
 
-<!-- ================================
-     NAVBAR
-================================ -->
+    <nav class="navbar">
 
-<header class="navbar">
-
-    <div class="container nav-container">
-
-        <a href="index.html"
-           class="logo">
+        <div class="logo">
 
             <div class="logo-icon">
                 🌿
             </div>
 
-            <div>
-
-                <strong>
-                    Desa Sepinggan Gelik
-                </strong>
-
-                <small>
-                    Website Desa
-                </small>
-
+            <div class="logo-text">
+                <h2>Desa Sepinggan Gelik</h2>
+                <p>Website Desa</p>
             </div>
 
-        </a>
+        </div>
 
 
-        <button
-            class="menu-toggle"
-            id="menuToggle">
+        <div class="menu">
 
-            ☰
+            <a href="index.html">Beranda</a>
+            <a href="profil.html">Profil</a>
+            <a href="potensi.html">Potensi</a>
+            <a href="fasilitas.html">Fasilitas</a>
+            <a href="kegiatan.html">Kegiatan</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="kontak.html">Kontak</a>
 
-        </button>
+        </div>
 
-
-        <nav id="navMenu">
-
-            <a href="index.html">
-                Beranda
-            </a>
-
-            <a href="profil.html">
-                Profil
-            </a>
-
-            <a href="index.html#potensi">
-                Potensi
-            </a>
-
-            <a href="index.html#fasilitas">
-                Fasilitas
-            </a>
-
-            <a href="index.html#kegiatan">
-                Kegiatan
-            </a>
-
-            <a href="index.html#galeri">
-                Galeri
-            </a>
-
-            <a href="index.html#kontak">
-                Kontak
-            </a>
-
-        </nav>
-
-    </div>
-
-</header>
+    </nav>
 
 
+    <!-- =========================
+         DATA DESA
+    ========================= -->
 
-<!-- ================================
-     HERO PROFIL
-================================ -->
+    <section class="data-section">
 
-<section
-    class="hero"
-    style="min-height:65vh;">
+        <div class="subtitle">
+            DATA DESA
+        </div>
 
-    <div class="hero-overlay"></div>
-
-
-    <div class="container hero-content">
-
-        <span class="badge">
-            PROFIL DESA
-        </span>
-
-
-        <h1>
-
-            Profil
-
-            <span>
-                Sepinggan Gelik
-            </span>
-
+        <h1 class="title">
+            Sekilas Data Desa
         </h1>
 
-
-        <p>
-
-            Mengenal sejarah, kehidupan,
-            pemerintahan dan potensi
-            Desa Sepinggan Gelik.
-
+        <p class="description">
+            Data Desa Sepinggan Gelik
         </p>
 
-    </div>
 
-</section>
+        <!-- KARTU DATA -->
 
+        <div class="data-container">
 
+            <!-- Penduduk -->
+            <div class="data-card">
 
-<!-- ================================
-     PROFIL
-================================ -->
+                <div class="data-number">
+                    6.240
+                </div>
 
-<section class="section">
-
-    <div class="container">
-
-        <div class="two-column">
-
-
-            <div>
-
-                <img
-                    src="kantor-desa.jpg"
-                    alt="Kantor Desa Sepinggan Gelik"
-                    class="main-photo"
-                >
+                <div class="data-label">
+                    Penduduk
+                </div>
 
             </div>
 
 
-            <div class="text-content">
+            <!-- Kepala Keluarga -->
+            <div class="data-card">
 
-                <span>
-                    PROFIL DESA
-                </span>
+                <div class="data-number">
+                    Dahlan
+                </div>
 
+                <div class="data-label">
+                    Kepala Keluarga
+                </div>
 
-                <h2>
-                    Desa Sepinggan Gelik
-                </h2>
-
-
-                <p>
-
-                    Desa Sepinggan Gelik merupakan
-                    bagian dari wilayah pemerintahan
-                    desa yang memiliki potensi,
-                    sumber daya dan kehidupan
-                    masyarakat yang beragam.
-
-                </p>
+            </div>
 
 
-                <p>
+            <!-- Luas Wilayah -->
+            <div class="data-card">
 
-                    Masyarakat desa terus berupaya
-                    menjaga kebersamaan, meningkatkan
-                    pembangunan dan mengembangkan
-                    potensi yang dimiliki desa.
+                <div class="data-number">
+                    15,50
+                </div>
 
-                </p>
+                <div class="data-label">
+                    Luas Wilayah (km²)
+                </div>
+
+            </div>
 
 
-                <p>
+            <!-- Jumlah Dusun -->
+            <div class="data-card">
 
-                    Informasi pada halaman ini dapat
-                    disesuaikan dengan sejarah dan
-                    data resmi Desa Sepinggan Gelik.
+                <div class="data-number">
+                    5
+                </div>
 
-                </p>
+                <div class="data-label">
+                    Dusun
+                </div>
 
             </div>
 
         </div>
 
-    </div>
 
-</section>
+        <!-- =========================
+             DAFTAR DUSUN
+        ========================= -->
 
-
-
-<!-- ================================
-     VISI MISI
-================================ -->
-
-<section class="section gray-section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span>
-                VISI & MISI
-            </span>
-
+        <div class="dusun-section">
 
             <h2>
-                Arah Pembangunan Desa
+                Daftar Dusun Desa Sepinggan Gelik
             </h2>
 
-        </div>
+            <div class="dusun-list">
 
-
-        <div class="photo-cards">
-
-
-            <div class="photo-card">
-
-                <div>
-
-                    <h3>
-                        Visi Desa
-                    </h3>
-
-                    <p>
-
-                        Masukkan visi resmi
-                        Desa Sepinggan Gelik
-                        pada bagian ini.
-
-                    </p>
-
+                <div class="dusun-item">
+                    Dusun Sepinggan Gelik
                 </div>
 
-            </div>
-
-
-
-            <div class="photo-card">
-
-                <div>
-
-                    <h3>
-                        Misi Desa
-                    </h3>
-
-                    <p>
-
-                        Masukkan misi resmi
-                        Desa Sepinggan Gelik
-                        pada bagian ini.
-
-                    </p>
-
+                <div class="dusun-item">
+                    Dusun Sepinggan Kecil
                 </div>
 
-            </div>
+                <div class="dusun-item">
+                    Dusun Sepinggan Besar
+                </div>
 
+                <div class="dusun-item">
+                    Dusun Sepinggan Jirak
+                </div>
 
-
-            <div class="photo-card">
-
-                <div>
-
-                    <h3>
-                        Tujuan Desa
-                    </h3>
-
-                    <p>
-
-                        Masukkan tujuan pembangunan
-                        Desa Sepinggan Gelik
-                        pada bagian ini.
-
-                    </p>
-
+                <div class="dusun-item">
+                    Dusun Sepinggan Sukamantri
                 </div>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
-
-
-
-<!-- ================================
-     PEMERINTAHAN
-================================ -->
-
-<section class="section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span>
-                PEMERINTAHAN
-            </span>
-
-
-            <h2>
-                Pemerintah Desa
-            </h2>
-
-        </div>
-
-
-        <div class="government-grid">
-
-
-            <div class="government-card">
-
-                <img
-                    src="kepala-desa.jpg"
-                    alt="Kepala Desa"
-                >
-
-
-                <div>
-
-                    <span>
-                        KEPALA DESA
-                    </span>
-
-
-                    <h3>
-                        Nama Kepala Desa
-                    </h3>
-
-
-                    <p>
-                        Kepala Desa Sepinggan Gelik
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="government-card">
-
-                <img
-                    src="perangkat-desa.jpg"
-                    alt="Perangkat Desa"
-                >
-
-
-                <div>
-
-                    <span>
-                        PERANGKAT DESA
-                    </span>
-
-
-                    <h3>
-                        Perangkat Desa
-                    </h3>
-
-
-                    <p>
-
-                        Perangkat Pemerintah
-                        Desa Sepinggan Gelik.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================================
-     FOOTER
-================================ -->
-
-<footer>
-
-    <div class="container footer-grid">
-
-
-        <div>
-
-            <h3>
-                🌿 Desa Sepinggan Gelik
-            </h3>
-
-
-            <p>
-
-                Website informasi dan publikasi
-                Desa Sepinggan Gelik.
-
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <h4>
-                Menu
-            </h4>
-
-
-            <a href="index.html">
-                Beranda
-            </a>
-
-
-            <a href="profil.html">
-                Profil
-            </a>
-
-
-            <a href="index.html#potensi">
-                Potensi
-            </a>
-
-
-            <a href="index.html#fasilitas">
-                Fasilitas
-            </a>
-
-
-            <a href="index.html#galeri">
-                Galeri
-            </a>
-
-        </div>
-
-
-        <div>
-
-            <h4>
-                Kontak
-            </h4>
-
-
-            <p>
-                📍 Kantor Desa
-            </p>
-
-
-            <p>
-                📞 08xxxxxxxxxx
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="copyright">
-
-        ©
-        <span id="year"></span>
-        Desa Sepinggan Gelik.
-        Semua Hak Dilindungi.
-
-    </div>
-
-</footer>
-
-
-
-<script src="script.js"></script>
+    </section>
 
 </body>
-
 </html>
